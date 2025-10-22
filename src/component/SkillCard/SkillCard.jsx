@@ -3,7 +3,7 @@ import React from 'react';
 const SkillCard = ({skill}) => {
     const {image,skillName,rating,price}=skill;
     return (
-        <div className="rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <div className=" rounded-2xl shadow p-4 hover:shadow-lg transition">
       <img
         src={image}
         alt={skillName}

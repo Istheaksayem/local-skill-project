@@ -11,9 +11,8 @@ const router = createBrowserRouter([
       {
         path:"/",
         Component:Home,
-      
-
-      }
+     
+        }
     ]
   },
 ]);
