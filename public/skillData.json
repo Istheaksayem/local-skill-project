@@ -1,0 +1,98 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://i.ibb.co.com/d00hKTwS/Beginner-Guitar-Lessons.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers.",
+    "image": "https://i.ibb.co.com/SXXxxNg6/Spoken-English-Practice.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Digital Marketing Basics",
+    "providerName": "Rafi Ahmed",
+    "providerEmail": "rafi@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Learn SEO, social media marketing, and content strategy for beginners.",
+    "image": "https://i.ibb.co.com/v6BX973f/Digital-Marketing-Basics.jpg",
+    "category": "Marketing"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Graphic Design with Canva",
+    "providerName": "Nadia Rahman",
+    "providerEmail": "nadia@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 6,
+    "description": "Create eye-catching designs using Canva — perfect for social media and branding.",
+    "image": "https://i.ibb.co.com/7tsmqrq1/Graphic-Design-with-Canva.jpg",
+    "category": "Design"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Basic Photography Skills",
+    "providerName": "John Lee",
+    "providerEmail": "john@skillswap.com",
+    "price": 18,
+    "rating": 4.5,
+    "slotsAvailable": 3,
+    "description": "Learn how to shoot and edit professional-looking photos using your smartphone or camera.",
+    "image": "https://i.ibb.co.com/TDPP4MqC/Basic-Photography-Skills.jpg",
+    "category": "Photography"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Cooking Traditional Dishes",
+    "providerName": "Farhana Kabir",
+    "providerEmail": "farhana@skillswap.com",
+    "price": 12,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Master the art of cooking delicious traditional Bangladeshi meals.",
+    "image": "https://i.ibb.co.com/gZNngfth/Cooking-Traditional-Dishes.jpg",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Web Development Basics",
+    "providerName": "Tareq Hasan",
+    "providerEmail": "tareq@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "HTML, CSS, and JavaScript crash course for absolute beginners.",
+    "image": "https://i.ibb.co.com/MDrzSs51/Web-Development-Basics.jpg",
+    "category": "Technology"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Yoga for Stress Relief",
+    "providerName": "Ananya Das",
+    "providerEmail": "ananya@skillswap.com",
+    "price": 14,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Gentle yoga sessions to improve flexibility and reduce stress.",
+    "image": "https://i.ibb.co.com/jvMPbVnR/Yoga-for-Stress-Relief.jpg",
+    "category": "Health & Fitness"
+  }
+]
