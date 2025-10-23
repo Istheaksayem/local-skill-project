@@ -16,9 +16,10 @@ const NavBar = () => {
       <div className="flex items-center gap-6">
         <NavLink to="/" >Home</NavLink>
         <NavLink to="/profile" >My Profile</NavLink>
-        <Link className="btn btn-neutral">Login</Link>
+        <Link to="/auth/login" className="btn btn-neutral">Login</Link>
       </div>
     </div>
+    
     );
 };
 

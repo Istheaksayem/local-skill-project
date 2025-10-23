@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SkillCard from '../component/SkillCard/SkillCard';
 import TopRatedProviders from '../component/TopRatedProviders';
+import HowItWorks from '../component/HowItWorks';
+
 
 
 const Home = () => {
@@ -22,6 +24,8 @@ const Home = () => {
 
             </div>
             <TopRatedProviders></TopRatedProviders>
+            <HowItWorks></HowItWorks>
+           
           
         </div>
     );
