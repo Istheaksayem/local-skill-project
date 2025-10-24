@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { use } from 'react';
 import {  Link, NavLink } from 'react-router'
 import logo from '../../assets/WhatsApp Image 2025-10-21 at 21.28.52_e3400c53.png'
+import { AuthContext } from '../Provider/AuthProvider';
+
+
 
 
 const NavBar = () => {
+
+  const {user}=use(AuthContext)
+
+  
     return (
            <div className='flex items-center justify-between px-6 py-3 bg-gray-100'>
       
@@ -13,6 +20,7 @@ const NavBar = () => {
       </div>
 
       {/* Right side - Home & Profile */}
+      <div>{user && user.email}</div>
       <div className="flex items-center gap-6">
         <NavLink to="/" >Home</NavLink>
         <NavLink to="/profile" >My Profile</NavLink>
