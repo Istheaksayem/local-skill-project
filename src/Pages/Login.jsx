@@ -1,33 +1,40 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../component/Provider/AuthProvider';
+import { FaEye } from 'react-icons/fa';
 
 
 const Login = () => {
-    const [error,setError]=useState("");
+    const [showPassword ,setShowPassword]=useState(false)
+    const [error, setError] = useState("");
     const { signIn } = use(AuthContext)
-    const location=useLocation();
+    const location = useLocation();
     console.log(location)
-    const navigate =useNavigate();
+    const navigate = useNavigate();
     const handleLogin = (e) => {
         e.preventDefault();
         const form = e.target
         const email = form.email.value;
         const password = form.password.value;
         console.log({ email, password })
-        signIn(email,password)
+        signIn(email, password)
             .then((result) => {
                 const user = result.user
                 console.log(user)
-                navigate(`${location.state?location.state:"/"}`)
+                navigate(`${location.state ? location.state : "/"}`)
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // alert(errorCode, errorMessage)
-                setError(errorMessage,errorCode)
+                setError(errorMessage, errorCode)
             });
 
+    }
+
+    const handleTogglePasswordShow =(e) =>{
+        e.preventDefault();
+        setShowPassword(!showPassword)
     }
     return (
         <div className='flex justify-center min-h-screen items-center'>
@@ -46,13 +53,17 @@ const Login = () => {
                         />
                         {/* password  */}
                         <label className="label">Password</label>
-                        <input
-                            type="password"
-                            name='password'
-                            className="input"
-                            placeholder="Password"
-                            required
-                        />
+                        <div className='relative'>
+                            <input
+                                type={showPassword ? 'text':'password'}
+                                name='password'
+                                className="input"
+                                placeholder="Password"
+                                required
+                            />
+                            <button onClick={handleTogglePasswordShow}
+                             className="btn btn-xs absolute top-2 right-5"><FaEye/></button>
+                        </div>
                         {error && <p className='text-red-500'>{error}</p>}
                         <div><a className="link link-hover">Forgot password?</a></div>
                         <button type='submit' className="btn btn-neutral mt-4">Login</button>
