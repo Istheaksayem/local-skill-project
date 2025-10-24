@@ -5,7 +5,7 @@ import { FaEye } from 'react-icons/fa';
 
 
 const Login = () => {
-    const [showPassword ,setShowPassword]=useState(false)
+    const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState("");
     const { signIn } = use(AuthContext)
     const location = useLocation();
@@ -32,10 +32,14 @@ const Login = () => {
 
     }
 
-    const handleTogglePasswordShow =(e) =>{
+    const handleTogglePasswordShow = (e) => {
         e.preventDefault();
         setShowPassword(!showPassword)
     }
+    const handleForgetPassword = () => {
+        console.log("forget password")
+    }
+
     return (
         <div className='flex justify-center min-h-screen items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
@@ -55,17 +59,19 @@ const Login = () => {
                         <label className="label">Password</label>
                         <div className='relative'>
                             <input
-                                type={showPassword ? 'text':'password'}
+                                type={showPassword ? 'text' : 'password'}
                                 name='password'
                                 className="input"
                                 placeholder="Password"
                                 required
                             />
                             <button onClick={handleTogglePasswordShow}
-                             className="btn btn-xs absolute top-2 right-5"><FaEye/></button>
+                                className="btn btn-xs absolute top-2 right-5"><FaEye /></button>
                         </div>
                         {error && <p className='text-red-500'>{error}</p>}
-                        <div><a className="link link-hover">Forgot password?</a></div>
+                        <div onClick={handleForgetPassword}>
+                            <a className="link link-hover">Forgot password?</a>
+                        </div>
                         <button type='submit' className="btn btn-neutral mt-4">Login</button>
                         <p className='text-center font-semibold'>Don’t Have An Account ? <Link className='text-secondary' to="/auth/register">Register</Link></p>
                     </fieldset>

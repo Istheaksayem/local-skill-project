@@ -16,7 +16,7 @@ const SkillDetails = () => {
 
     return (
         <div>
-            <h2>Skills Details</h2>
+            <h2 className='font-semibold text-center mt-3 text-2xl'>Skills <span className='text-blue-600'>Details</span></h2>
            
             <SkillsDetailsCard skillDetails={skillDetails}></SkillsDetailsCard>
         </div>
