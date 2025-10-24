@@ -1,17 +1,19 @@
-import React, {  useState } from 'react';
-import { Link } from 'react-router';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../component/Provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import { use } from 'react';
 
 
 const Register = () => {
-        const { createUser,setUser } = use(AuthContext)
+    const { createUser, setUser, updateUser } = use(AuthContext)
 
-    const [error, setError] = useState('')
+    const [error, setError] = useState('');
+
+    const navigate =useNavigate()
 
     const handRegister = (e) => {
-    
+
         e.preventDefault();
         //  console.log(e.target)
         const form = e.target;
@@ -36,8 +38,18 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user
-                // console.log(user)
-                setUser(user)
+                // console.log(user);
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(() => {
+
+                        setUser({...user,displayName: name, photoURL: photo})
+                        navigate("/")
+                    })
+                    .catch((error) => {
+                     console.log(error)
+                     setUser(user)
+                    });
+
             })
             .catch((error) => {
                 const errorCode = error.code;
