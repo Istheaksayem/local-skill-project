@@ -13,7 +13,7 @@ const NavBar = () => {
     // console.log("user trying to Logout")
     logout()
       .then(() => {
-      toast("you Logout Successfully")
+        toast("you Logout Successfully")
       }).catch((error) => {
         console.log(error)
       });
@@ -21,7 +21,7 @@ const NavBar = () => {
 
 
   return (
-    <div className='flex items-center justify-between px-6 py-3 bg-gray-100'>
+    <div className='flex items-center justify-between px-6 py-3 bg-gray-100 mt-1'>
 
       {/* Left side - Logo */}
       <div className="text-xl font-bold">
@@ -34,15 +34,31 @@ const NavBar = () => {
         <NavLink to="/" >Home</NavLink>
         <NavLink to="/profile" >My Profile</NavLink>
         <div className='login-btn flex gap-5'>
-          <img className='w-12 rounded-full' src={`${user ? user.photoURL:userIcon}`} alt="" />
+
+          <div className="relative group">
+            <img
+              className='w-12 h-12 rounded-full cursor-pointer border-2 border-gray-400'
+              src={user && user.photoURL ? user.photoURL : userIcon}
+              alt="User Avatar"
+            />
+
+            {/* hover display name  */}
+            {user && user.displayName && (
+              <span className="absolute left-1/2 -translate-x-1/2 bottom-0 bg-gray-800 text-white text-sm px-2 py-1 rounded-md hidden group-hover:block whitespace-nowrap transition-all duration-300 opacity-0 group-hover:opacity-100">
+                {user.displayName}
+              </span>
+            )}
+          </div>
+
           {user ? <button onClick={handleLogout} className="btn btn-neutral">Logout</button> : <Link to="/auth/login" className="btn btn-neutral">Login</Link>}
 
 
         </div>
+          <ToastContainer position='top-center'></ToastContainer>
       </div>
-      {/* <ToastContainer position='top-center'></ToastContainer> */}
+    
     </div>
-  
+
   );
 };
 
