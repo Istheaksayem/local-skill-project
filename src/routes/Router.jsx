@@ -8,6 +8,7 @@ import Root from "../Pages/Root";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRouter from "../component/PrivateRouter";
+import Profile from "../component/Profile";
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
           </PrivateRouter>,
 
           loader: () =>fetch("/skillData.json")
+        },
+        {
+          path:"/profile",
+          Component:Profile,
         }
     ]
   },
