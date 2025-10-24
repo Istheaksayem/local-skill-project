@@ -7,6 +7,7 @@ import SkillDetails from "../Pages/SkillDetails";
 import Root from "../Pages/Root";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import PrivateRouter from "../component/PrivateRouter";
 
 
 
@@ -33,7 +34,9 @@ const router = createBrowserRouter([
         },
         {
           path:"/skill-details/:id",
-          Component:SkillDetails,
+          element:<PrivateRouter>
+            <SkillDetails></SkillDetails>
+          </PrivateRouter>,
 
           loader: () =>fetch("/skillData.json")
         }

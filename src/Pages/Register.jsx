@@ -1,7 +1,7 @@
 import React, {  useState } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../component/Provider/AuthProvider';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { use } from 'react';
 
 
@@ -97,6 +97,7 @@ const Register = () => {
                     </fieldset>
                 </form>
             </div>
+            <ToastContainer position='top-center'></ToastContainer>
         </div>
     );
 };

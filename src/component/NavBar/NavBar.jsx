@@ -3,10 +3,7 @@ import { Link, NavLink } from 'react-router'
 import logo from '../../assets/WhatsApp Image 2025-10-21 at 21.28.52_e3400c53.png'
 import { AuthContext } from '../Provider/AuthProvider';
 import userIcon from '../../assets/user.png'
-
-
-
-
+import { toast, ToastContainer } from 'react-toastify';
 
 
 const NavBar = () => {
@@ -16,7 +13,7 @@ const NavBar = () => {
     // console.log("user trying to Logout")
     logout()
       .then(() => {
-      alert("you Logout Successfully")
+      toast("you Logout Successfully")
       }).catch((error) => {
         console.log(error)
       });
@@ -43,8 +40,9 @@ const NavBar = () => {
 
         </div>
       </div>
+      {/* <ToastContainer position='top-center'></ToastContainer> */}
     </div>
-
+  
   );
 };
 
