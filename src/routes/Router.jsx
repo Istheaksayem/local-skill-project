@@ -49,6 +49,10 @@ const router = createBrowserRouter([
         {
           path:"/auth/forget-password",
           Component:ForgetPassword
+        },
+        {
+          path:"/",
+          element:<h2>error 404</h2>
         }
     ]
   },

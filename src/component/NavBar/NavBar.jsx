@@ -3,7 +3,8 @@ import { Link, NavLink } from 'react-router'
 import logo from '../../assets/WhatsApp Image 2025-10-21 at 21.28.52_e3400c53.png'
 import { AuthContext } from '../Provider/AuthProvider';
 import userIcon from '../../assets/user.png'
-import { toast, ToastContainer } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 
 const NavBar = () => {
@@ -29,7 +30,7 @@ const NavBar = () => {
       </div>
 
       {/* Right side - Home & Profile */}
-      <div>{user && user.email}</div>
+      <div className='hidden md:block'>{user && user.email}</div>
       <div className="flex items-center gap-6">
         <NavLink to="/" >Home</NavLink>
         <NavLink to="/profile" >My Profile</NavLink>
@@ -54,7 +55,8 @@ const NavBar = () => {
 
 
         </div>
-          <ToastContainer position='top-center'></ToastContainer>
+          {/* <ToastContainer position='top-center'></ToastContainer> */}
+          {/* <Toaster position='top-center'></Toaster> */}
       </div>
     
     </div>

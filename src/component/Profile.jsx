@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../component/Provider/AuthProvider';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
+
 
 const Profile = () => {
   const { user, updateUser } = useContext(AuthContext);

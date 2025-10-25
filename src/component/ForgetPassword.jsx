@@ -1,5 +1,8 @@
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import React, { useEffect, useRef } from 'react';
+import toast from 'react-hot-toast';
+
+
 import { useLocation, useNavigate } from 'react-router';
 
 const ForgetPassword = () => {
@@ -56,7 +59,9 @@ const ForgetPassword = () => {
                         </button>
                     </fieldset>
                 </form>
+              
             </div>
+          
         </div>
     );
 };

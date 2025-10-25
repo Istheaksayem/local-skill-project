@@ -16,7 +16,7 @@ const Home = () => {
     }, [])
     return (
         <div>
-            <h2 className='text-3xl font-bold text-center mt'>Popular Skills</h2>
+            <h2 className='text-3xl font-bold text-center mt animate__animated animate__lightSpeedInRight'>Popular Skills</h2>
             <div className='grid md:grid-cols-3 gap-6'>
                 {skills.map((skill) => (
                     <SkillCard key={skill.skillId} skill={skill} />

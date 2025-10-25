@@ -2,15 +2,32 @@ import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../component/Provider/AuthProvider';
 import { FaEye } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+const auth =getAuth()
 
+const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
+
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState("");
     const { signIn } = use(AuthContext)
     const location = useLocation();
     console.log(location)
     const navigate = useNavigate();
+
+        const handleGoogleSignIn =() => {
+            // console.log("google button clicked")
+            signInWithPopup(auth,googleProvider)
+            .then(result =>{
+                console.log(result.user)
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+        }
+
     const handleLogin = (e) => {
         e.preventDefault();
         const form = e.target
@@ -75,6 +92,11 @@ const Login = () => {
                         </div>
                         <button type='submit' className="btn btn-neutral mt-4">Login</button>
                         <p className='text-center font-semibold'>Don’t Have An Account ? <Link className='text-secondary' to="/auth/register">Register</Link></p>
+                        
+                           <div className='flex item-center justify-center'>
+                             <button onClick={handleGoogleSignIn} type='submit' className="btn bg-white mt-4"> <FcGoogle />Login In With Google</button>
+                       
+                           </div>
                     </fieldset>
                 </form>
             </div>
