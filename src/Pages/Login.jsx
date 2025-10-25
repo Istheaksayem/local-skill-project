@@ -38,6 +38,7 @@ const Login = () => {
     }
     const handleForgetPassword = () => {
         console.log("forget password")
+        navigate("/auth/forget-password")
     }
 
     return (
