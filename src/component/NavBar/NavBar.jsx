@@ -10,6 +10,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const NavBar = () => {
 
   const { user, logout } = use(AuthContext)
+  
   const handleLogout = () => {
     // console.log("user trying to Logout")
     logout()
