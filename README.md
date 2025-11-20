@@ -7,7 +7,7 @@ The project is fully responsive and designed with a clean, modern UI.
 ---
 
 ## 🔗 Live Demo  
-👉 **Live Link:** https://spontaneous-douhua-1b3244.netlify.app/
+👉 **Live Link:** [https://spontaneous-douhua-1b3244.netlify.app/](https://eloquent-cucurucho-4093e7.netlify.app/)
 
 
 ---
